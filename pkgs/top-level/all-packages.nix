@@ -2478,6 +2478,8 @@ let
 
   shotwell = callPackage ../applications/graphics/shotwell { };
 
+  shellcheck = haskellPackages.callPackage ../tools/system/shellcheck { };
+
   shellinabox = callPackage ../servers/shellinabox { };
 
   siege = callPackage ../tools/networking/siege {};
@@ -8189,7 +8191,7 @@ let
   zookeeper = callPackage ../servers/zookeeper { };
 
   zookeeper_mt = callPackage ../development/libraries/zookeeper_mt { };
-  
+
   xquartz = callPackage ../servers/x11/xquartz { };
   quartz-wm = callPackage ../servers/x11/quartz-wm { stdenv = clangStdenv; };
 
