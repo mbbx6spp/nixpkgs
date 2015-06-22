@@ -5066,6 +5066,7 @@ let
   jdtsdk = callPackage ../development/eclipse/jdt-sdk { };
 
   jruby165 = callPackage ../development/interpreters/jruby { };
+  jruby17 = callPackage ../development/interpreters/jruby/17.nix { };
 
   jython = callPackage ../development/interpreters/jython {};
 
