@@ -3,7 +3,7 @@
 
 
 let
-  version = "3.0.0-beta.4";
+  version = "3.0.0";
   registrySnapshot = callPackage ./registrySnapshot.nix { };
 
   # TODO: all these below probably should go into nixpkgs.erlangModules.sources.*
@@ -80,8 +80,8 @@ stdenv.mkDerivation {
   inherit version;
 
   src = fetchurl {
-    url = "https://github.com/rebar/rebar3/archive/${version}.tar.gz";
-    sha256 = "0px66scjdia9aaa5z36qzxb848r56m0k98g0bxw065a2narsh4xy";
+    url = "https://github.com/erlang/rebar3/archive/${version}.tar.gz";
+    sha256 = "1jmsq552mb3bbfkh9043609mfvncz29hp44zbl89vffgnxxwssl8";
   };
 
   patches = if hermeticRebar3 == true
