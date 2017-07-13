@@ -1,27 +1,17 @@
-{ lib, python2, fetchurl }:
+{ lib, python2Packages, fetchFromGitHub }:
 
-python2.pkgs.buildPythonApplication rec {
+python2Packages.buildPythonApplication rec {
   name = "cli53-${version}";
-  version = "0.4.4";
+  version = "0.5.2-1";
 
-  src = fetchurl {
-    url = "mirror://pypi/c/cli53/${name}.tar.gz";
-    sha256 = "0s9jzigq6a16m2c3qklssx2lz16cf13g5zh80vh24kxazaxqzbig";
+  src = fetchFromGitHub {
+    owner = "dailykos";
+    repo = "cli53";
+    rev = "e4b27cbe7eb76dbfbcee1a0e1ff71cedd8aa9d34";
+    sha256 = "12nk12y2w1g8llq8ckr50abbbgs2m23hnb9fvpfi7k9dhfhmzxi4";
   };
 
-  postPatch = ''
-    substituteInPlace setup.py --replace "'argparse', " ""
-  '';
-
-  checkPhase = ''
-    ${python2.interpreter} -m unittest discover -s tests
-  '';
-
-  # Tests do not function
-  doCheck = false;
-
-  propagatedBuildInputs = with python2.pkgs; [
-    argparse
+  propagatedBuildInputs = with python2Packages; [
     boto
     dns
   ];
