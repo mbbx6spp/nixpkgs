@@ -42,6 +42,7 @@ stdenv.mkDerivation rec {
     bundle config git.allow_insecure true
   '';
 
+  broken = true;
   passthru = {
     inherit env ruby;
   };
