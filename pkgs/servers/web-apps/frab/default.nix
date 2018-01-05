@@ -38,6 +38,8 @@ stdenv.mkDerivation rec {
     rm -rf $out/share/frab/tmp $out/share/frab/public/system
     ln -sf /run/frab/system $out/share/frab/public/system
     ln -sf /tmp $out/share/frab/tmp
+
+    bundle config git.allow_insecure true
   '';
 
   passthru = {
