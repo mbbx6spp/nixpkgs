@@ -832,4 +832,12 @@
       version = "1.1.0";
       sha256  = "09gv0fpsrxzgna0xrhrdk8d4va9s0gvdbz596r306qxb4mip4w3r";
     };
+  pingdom =
+    {
+      owner   = "russellcardullo";
+      repo    = "terraform-provider-pingdom";
+      rev     = "v1.1.1";
+      version = "1.1.1";
+      sha256  = "0lvvqh6yxkbx4vp0yhwrl020n939nkwic98ks3423j4j30kmasn2";
+    };
 }

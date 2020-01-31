@@ -16,3 +16,4 @@ poseidon/terraform-provider-matchbox
 spaceapegames/terraform-provider-wavefront
 tweag/terraform-provider-nixos
 tweag/terraform-provider-secret
+russellcardullo/terraform-provider-pingdom
